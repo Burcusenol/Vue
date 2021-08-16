@@ -1,0 +1,82 @@
+v-model: inputun kontrol etmek istediği veriyi alır.
+computed:Data gibi davranır ama metod gibi çalışır.
+
+eb557749ee167e1649fe7a63a41907929314963a
+
+ git cherry-pick 50ca2ee1b9fc61a0d2f017887882dcc3136c7b2d
+
+git cherry-pick 94ba91d584609963b5093fe8e1e15bd6ce2a4571
+
+
+ git cherry-pick 3a602332b12f60c3e123c9d2a7481517908c4900
+
+   [HttpGet("getproducts")]
+        public async Task<IActionResult> GetProducts(){
+    
+           var query=(from product in _financeContext.Products
+             join calculation in _financeContext.Calculations on product.CalculationId equals calculation.CalculationId
+             select new
+             {
+                product.Code,
+                CalculationId=product.CalculationId,
+                calculation.FinanceAmount,
+                calculation.InstallmentAmount
+             }).Take(100).ToList();
+ 
+            //return Ok(query);
+           
+            
+           return new OkObjectResult(new ResultViewModel<Object> {Result=query,Success=true,ErrorMessage=" "});
+            
+        }
+
+
+  <el-col>
+      Burcu
+    </el-col>
+
+    <el-table :data="products" border style="width: 100%">
+      <el-table-column prop="code" label="Code" width="180"> </el-table-column>
+      <el-table-column prop="calculationId" label="CalculationId" width="180">
+      </el-table-column>
+      <el-table-column prop="financeAmount" label="FinanceAmount" width="180">
+      </el-table-column>
+      <el-table-column
+        prop="installmentAmount"
+        label="InstallmentAmount"
+        width="180"
+      >
+      </el-table-column>
+    </el-table>
+
+    <div style="margin-top: 20px" class=" md-2 row">
+      <div class="col-md-2">
+        <el-button type="button" class="btn" @click="totalFinanceAmount">
+          Finance Sum</el-button
+        >
+        <el-button type="button" class="btn" @click="totalInstallmentAmount">
+          Installment Sum</el-button
+        >
+        <el-button
+          type="button"
+          class="btn"
+          @click="totalFinanceAndInstallmentAmount"
+        >
+          Finance And Installment Sum</el-button
+        >
+      </div>
+    </div>
+
+    <el-col :span="3" style="margin-left:30px">
+      <p id="finance"></p>
+    </el-col>
+    <el-col :span="5" style="margin-left:50px"> <p id="amount"></p></el-col>
+    <el-col :span="8" style="margin-left:20px">
+      <p id="total"></p>
+    </el-col>
+  </div>
+</template>
+
+
+
+clean code kitabı
