@@ -1,5 +1,68 @@
 v-model: inputun kontrol etmek istediği veriyi alır.
 computed:Data gibi davranır ama metod gibi çalışır.
+computed- metod farkı:computed kodu analiz eder ve ihtiyacı olan değişken değişmişse kodu çalıştırır data da değişiklik yoksa computed tekrardan execute etmez
+Datadaki property gibi çalışır ama fonksiyon gibi tanımlanır.
+Bir mantık karşılığında başka bir yeri etkilemek istiyorsak computed kullanıyoruz.
+Copmuted senkronize çalışır.
+
+watch:Asenkron olarak watch Data propertysi içindeki herhangi bir veriyi gözlemlemeyi sağlıyor.Onun değeri değiştiğinde watch devreye girer.Data içindeki property ile eşleşecek şekilde tanımlamak gerekiyor.
+
+v-bind: :
+v-on: @
+
+Faydalı Linkler:
+
+Resmi Döküman - Başlangıç: http://vuejs.org/guide/
+
+Resmi Döküman - Template Syntax: http://vuejs.org/guide/syntax.html
+
+Resmi Döküman - Events: http://vuejs.org/guide/events.html
+
+Resmi Döküman - Computed Properties & Watchers: http://vuejs.org/guide/computed.html
+
+Resmi Döküman - Class ve Style Binding: http://vuejs.org/guide/class-and-style.html
+
+KOŞULLAR
+
+v-show // v-if farkı: v-if'te şart sağlanmıyorsa dom üzerinden onu siler sonra tekrar ekler
+v-show sadece gizleme işlemi yapar domdan silmez display:none
+
+v-for (product,index)-->indexe alma işlemi yapar
+
+border:border bir booster değil bir pixeldir
+
+template-->render edilmez child elementleri contain eder.html yapısını bozmaz.
+
+<strong>Bold olarak yazar </strong>
+
+LİSTELER DÖKÜMAN
+Resmi Döküman - Koşullar: https://vuejs.org/v2/guide/conditional.html
+
+Resmi Döküman - Listeler: https://vuejs.org/v2/guide/list.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 eb557749ee167e1649fe7a63a41907929314963a
 
