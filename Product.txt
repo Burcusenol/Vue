@@ -1,6 +1,6 @@
 v-model: inputun kontrol etmek istediği veriyi alır.
 computed:Data gibi davranır ama metod gibi çalışır.
-computed- metod farkı:computed kodu analiz eder ve ihtiyacı olan değişken değişmişse kodu çalıştırır data da değişiklik yoksa computed tekrardan execute etmez
+computed - metod farkı:computed kodu analiz eder ve ihtiyacı olan değişken değişmişse kodu çalıştırır data da değişiklik yoksa computed tekrardan execute etmez
 Datadaki property gibi çalışır ama fonksiyon gibi tanımlanır.
 Bir mantık karşılığında başka bir yeri etkilemek istiyorsak computed kullanıyoruz.
 Copmuted senkronize çalışır.
@@ -42,25 +42,35 @@ Resmi Döküman - Listeler: https://vuejs.org/v2/guide/list.html
 
 
 
+settimeout-->Zamana bağlı durumlarda kullanılıyor
+Watcher layer--->vue instance için property oluşturulabiliyor ama bunun vue js içerisinde kullanılmasına izin vermeyen katman
+
+
+$data-->data propertisine erişmeye yarıyor.
+
+ref-->attiribute vuejs tarafından tanınan bir attiribute referansın kısaltmasıdır.
+
+Template Mount -->Oluşturulan bir instance üzerinde bir template i bağlamaya yarar.
+$mount(bir parametre alır "#app") gibi
+
+$ işaretiyle başlayan tanımlamalar vue tarafından bize sağlanan bir property ya da metottur.
+
+string template-->File template kullanılır.
+
+Browser üzerinde çalışan compiler diğeri de development compiler(Vue CLI ile kullanılır)
 
 
 
+Vue instance -----watch---> -----Virtual DOM ------update---->----- DOM
+
+name="ABC" ---<span :text="name"></span>
+Virtual dom -->Ara katman 
+
+watch--->updat
+Destroy da vue ile template arasındaki bağlantıyı koparmış oluyoruz 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<sytle scoped> -->scoped sayesinde stil kodlarının ilgili sayfada çalışmasını sağlar
 
 
 
