@@ -74,6 +74,17 @@ Destroy da vue ile template arasındaki bağlantıyı koparmış oluyoruz
 
 
 
+customEvent: $emit: yaymak demek.Belirlenen kriterlerde veriyi yaymayı sağlar.parent componentte $event ile bu veriye erişiyoruz.
+
+Veri akışı yukarıdan aşağıyadır.
+
+event bus:Merkezi olark veri akışını sağlayanbir yardımcıdır.Eventbusla bir veriyi göndermek için 'emit' kullanıyoruz eventBusla bir veriyi alamk için 'on' kullanıyoruz
+
+
+Slot:istediğimz içeriği istediğimiz şekilde gösterebiliyouz.
+:is-->verilen veriyi ayrı component varsa onu göstermeye yarıyor.Componentler tekrar render ediliyor bu süreçte.(keep-alive) bu componentlerin tekrar render edilmesini engeller.Destroyed lifehook kaybolduğun çin 2 yeni hook geliyor
+activated-deactivated
+
 eb557749ee167e1649fe7a63a41907929314963a
 
  git cherry-pick 50ca2ee1b9fc61a0d2f017887882dcc3136c7b2d
