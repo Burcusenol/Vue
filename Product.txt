@@ -85,6 +85,22 @@ Slot:istediğimz içeriği istediğimiz şekilde gösterebiliyouz.
 :is-->verilen veriyi ayrı component varsa onu göstermeye yarıyor.Componentler tekrar render ediliyor bu süreçte.(keep-alive) bu componentlerin tekrar render edilmesini engeller.Destroyed lifehook kaybolduğun çin 2 yeni hook geliyor
 activated-deactivated
 
+
+v-model modifierlar kontrol için kullanılıyor
+lazy-number-trim vs.
+
+textarea'da white-space:pre dediğimiz zaman satır sayısını algılıyor 
+aynı grup altında bulunan checkboxların değerinin aynı olması gerekiyor
+
+
+radiobutonlardaki aktiflik durumu otomatik olarak algılanıyor
+
+value:propstan gelen veriye eşit oluyor
+@input vs customdan gelen verilere eşit oluyor
+
+
+
+
 eb557749ee167e1649fe7a63a41907929314963a
 
  git cherry-pick 50ca2ee1b9fc61a0d2f017887882dcc3136c7b2d
