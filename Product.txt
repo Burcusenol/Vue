@@ -101,6 +101,15 @@ value:propstan gelen veriye eşit oluyor
 
 
 
+bind(el,binding,vnode)=>el paramaetresi bize directivein kullanıldığı elementi verir.Binding hangi argümanı aldığını verir.vnode vdom üzerindeki işlemleri verir.Binding
+inserted=>element doma eklenir eklenmez çalışan hooktur
+update(el,binding,vnode,oldVnode)=>directivein bağlı olduğu component render olduğunda metot çalışır.
+componentUpdated=>Child component de update olduğunda tetiklenir.
+
+Filter:Data içindeki veriyi değiştirir ama kullanıcı için değiştirir.
+
+
+
 eb557749ee167e1649fe7a63a41907929314963a
 
  git cherry-pick 50ca2ee1b9fc61a0d2f017887882dcc3136c7b2d
