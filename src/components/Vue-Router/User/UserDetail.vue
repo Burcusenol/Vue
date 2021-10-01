@@ -1,19 +1,28 @@
 <template>
   <div class="container">
     <h3>User Detail Component</h3>
-    <hr>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, earum libero odit optio repellendus sed
-      soluta? Animi, atque blanditiis commodi consequatur distinctio dolorem eaque eos expedita, modi reprehenderit
-      repudiandae soluta.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, earum libero odit optio repellendus sed
-      soluta? Animi, atque blanditiis commodi consequatur distinctio dolorem eaque eos expedita, modi reprehenderit
-      repudiandae soluta.
-    </p>
+    <hr />
+    <p>Kullanıcının Id Bilgisi : {{ $route.params.id }}</p>
+
+    <router-link tag="button" class="btn btn-primary" :to="navigationLink">
+      Kullanıcıyı Düzenle
+    </router-link>
   </div>
 </template>
 <script>
-  export default {}
+export default {
+  data() {
+    return {
+      navigationLink: {
+        name: "userEdit",
+        params: { id: this.$route.params.id },
+        query: { name: "burcu", lastName: "senol" },
+        hash:'#data'
+      },
+    };
+  },
+  beforeRouteEnter(to,from,next){
+    next()
+  }
+};
 </script>

@@ -109,6 +109,12 @@ componentUpdated=>Child component de update olduğunda tetiklenir.
 Filter:Data içindeki veriyi değiştirir ama kullanıcı için değiştirir.
 
 
+to:bizim değişen route u veriyor
+from:değişmeden önceki route u veriyor
+
+Vuex=Redux ile flaskin bir implementasyonudur
+
+
 
 eb557749ee167e1649fe7a63a41907929314963a
 

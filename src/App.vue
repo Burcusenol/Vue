@@ -1,30 +1,36 @@
 <template>
   <div class="container">
     <div class="row">
-      <h3>Vue-Router</h3>
-      <div class="col md 12">
-        <app-header></app-header>
-        <br>
-        <router-view></router-view>
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">VUEX</h1>
+        <hr>
+        <app-result :counter="counter"></app-result>
+        <hr>
+         <app-second-result :counter="counter"></app-second-result>
+        <hr>
+        <app-counter @counterEvent="counter += $event"></app-counter>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Header from "./components/Vue-Router/Header.vue";
-
-export default{
- components:{
-   appHeader:Header,
- },
-  data() {
-    return {
-
-    };
-  },
-  methods: {}
-}
+  import Result from "./components/Vue-State/components/Result.vue";
+  import Counter from "./components/Vue-State/components/Counter.vue";
+    import SecondResult from "./components/Vue-State/components/SecondResult.vue";
+  export default {
+    data(){
+      return {
+        counter : 0
+      }
+    },
+    components: {
+      appResult: Result,
+      appCounter: Counter,
+      appSecondResult:SecondResult
+    }
+  }
 </script>
 
-<style></style>
+<style>
+</style>

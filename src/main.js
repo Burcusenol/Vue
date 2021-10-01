@@ -1,10 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import ElementUI from "element-ui";
-import "animate.css";
 import VueResource from 'vue-resource';
 import VueRouter from 'vue-router'
 import {routes} from './route'
+import {store} from './store/store'
+
 export const eventBus = new Vue({
   methods: {
     data: {},
@@ -20,8 +21,16 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 const router=new VueRouter({
   routes,
-  mode:'history' //arada # olmadan urli çalıştırabiliriz
+  mode:'history',
+  scrollBehavior(){
+    return{x:0,y:800}
+  } //arada # olmadan urli çalıştırabiliriz
 });
+
+router.beforeEach((to,from,next)=>{
+  next()
+
+})
 
 
 Vue.http.options.root="https://vue-resource-cd83a-default-rtdb.firebaseio.com"
@@ -51,5 +60,6 @@ Vue.filter("count",(value)=>{
 
 new Vue({
   render: (h) => h(App),
-  router
+  router,
+  store
 }).$mount("#app");
